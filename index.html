@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Disha Bhise | Backend Developer, Python and FastAPI</title>
+<meta name="description" content="Disha Bhise is an AI and Data Science engineering student in Mumbai who builds FastAPI backends, REST APIs and full-stack projects.">
+<meta property="og:title" content="Disha Bhise | Backend Developer">
+<meta property="og:description" content="FastAPI backends, REST APIs and AI-ready apps. Projects, skills and certificates.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b7a6b'/%3E%3Ctext x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3EDB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f4f8;--surface:#fff;--ink:#101828;--muted:#566074;--line:#d9deea;
+  --accent:#0b7a6b;--accent-ink:#fff;--ok:#12a150;
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'Instrument Sans','Segoe UI',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1220;--surface:#141c2e;--ink:#e8ecf5;--muted:#9aa6bd;--line:#26314a;--accent:#4fd1b5;--accent-ink:#0c1220;--ok:#43d17f}}
+:root[data-theme="dark"]{--bg:#0c1220;--surface:#141c2e;--ink:#e8ecf5;--muted:#9aa6bd;--line:#26314a;--accent:#4fd1b5;--accent-ink:#0c1220;--ok:#43d17f}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);padding-bottom:env(safe-area-inset-bottom,0px);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800;margin-bottom:2rem}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.muted{color:var(--muted)}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:60px}
+.logo{font:800 1.15rem var(--head);text-decoration:none}
+nav{display:flex;gap:.25rem;align-items:center;overflow-x:auto;scrollbar-width:none}
+nav a{font-size:.95rem;font-weight:500;text-decoration:none;padding:.4rem .7rem;border-radius:8px;color:var(--muted);white-space:nowrap}
+nav a:hover{color:var(--ink);background:var(--surface)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1rem;flex:none}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding-top:clamp(3rem,8vw,6rem)}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.4rem);font-weight:800}
+.hero p{max-width:34em;margin:1.4rem 0 2rem;color:var(--muted);font-size:1.15rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-block;padding:.8rem 1.3rem;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);transition:transform .15s}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);font:400 .88rem/1.75 var(--mono);overflow:hidden;box-shadow:0 18px 40px -22px color-mix(in srgb,var(--accent) 55%,transparent)}
+.panel .bar{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 1rem;border-bottom:1px solid var(--line);font-size:.8rem}
+.panel .bar b{color:var(--ok);font-weight:500}
+.panel pre{padding:1rem 1.1rem;font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}
+.k{color:var(--accent)}
+.panel .l{opacity:0;animation:in .4s forwards}
+@keyframes in{to{opacity:1}}
+
+/* experience */
+.tl{list-style:none;padding:0;border-left:2px solid var(--line);margin-left:.4rem}
+.tl li{position:relative;padding:0 0 2.2rem 1.6rem}
+.tl li::before{content:"";position:absolute;left:-7px;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl li.now::before{background:var(--ok);border-color:var(--ok)}
+.tl h3{font-size:1.25rem;font-weight:700}
+.tl .when{font-size:.9rem;color:var(--muted);margin:.2rem 0 .6rem}
+.tl p{max-width:62ch}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;grid-column:span 2}
+.card.big{grid-column:span 6;padding:2rem}
+.card h3{font-size:1.35rem;font-weight:700}
+.card.big h3{font-size:1.8rem}
+.card ul{padding-left:1.1rem;color:var(--muted)}
+.card li{margin:.25rem 0}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto}
+.tags span{font:500 .78rem var(--mono);border:1px solid var(--line);border-radius:6px;padding:.15rem .5rem;color:var(--muted)}
+.links{display:flex;gap:1.2rem;font-weight:600}
+.links a{color:var(--accent)}
+.more{margin-top:1.5rem;color:var(--muted)}
+.win{align-self:flex-start;font:600 .85rem var(--body);background:var(--accent);color:var(--accent-ink);padding:.25rem .7rem;border-radius:999px}
+.card.big.award{border:2px solid var(--accent)}
+
+.shot{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;border-radius:10px;border:1px solid var(--line);background:var(--line)}
+.me{display:block;width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);margin-bottom:1.2rem}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem;margin-top:2rem}
+.cert{display:flex;flex-direction:column;gap:.35rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.8rem;text-decoration:none}
+.cert:hover{border-color:var(--accent)}
+.cert img,.cert .ph{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:top;border-radius:8px;border:1px solid var(--line)}
+.cert img.badge{object-fit:contain;background:#fff;padding:.5rem}
+.cert .ph{display:grid;place-items:center;background:var(--accent);color:var(--accent-ink);font:800 1.6rem var(--head);border:0}
+.cert b{font:700 1rem/1.3 var(--head);margin-top:.3rem}
+.cert small{color:var(--muted)}
+/* skills */
+dl{display:grid;grid-template-columns:11rem 1fr;gap:1rem 2rem;border-top:1px solid var(--line);padding-top:1.4rem}
+dt{font:700 1rem var(--head)}
+dd{color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.two h3{font-size:1.2rem;margin-bottom:1rem}
+.two ul{list-style:none;padding:0;display:grid;gap:1rem}
+.two li small{display:block;color:var(--muted)}
+
+footer{border-top:1px solid var(--line);padding:3.5rem 0 2.5rem}
+footer h2{font-size:clamp(2rem,6vw,3.4rem);margin-bottom:1.2rem}
+footer .mail{font:700 clamp(1.1rem,3.6vw,1.8rem) var(--head);color:var(--accent);overflow-wrap:anywhere}
+.social{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin:1.6rem 0 2.4rem;font-weight:600}
+small.copy{color:var(--muted)}
+
+@media(max-width:820px){
+  .hero,.two{grid-template-columns:1fr;gap:2rem}
+  .card{grid-column:span 6}
+  dl{grid-template-columns:1fr;gap:.2rem}
+  dd{margin-bottom:.9rem}
+  .logo{display:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.panel .l{opacity:1;animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Disha Bhise</a>
+    <nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#learning">Education</a><a href="#contact">Contact</a></nav>
+    <button id="theme" aria-label="Switch light or dark theme" title="Switch theme">◐</button>
+  </div>
+</header>
+<main id="top">
+<section class="wrap hero" style="padding-bottom:3rem">
+  <div>
+    <img class="me" src="https://i.postimg.cc/3x4bQHXq/IMG-20261004-111540.jpg" alt="Disha Bhise" width="84" height="84">
+    <h1>I build FastAPI backends and AI-ready apps.</h1>
+    <p>I'm Disha, a third-year AI and Data Science engineering student in Mumbai. I build APIs, databases and dashboards with Python, FastAPI and Django, and I'm now learning to build LLM apps with RAG and AI agents.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="https://github.com/bhisedisha05-ai" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+  </div>
+  <div class="panel" aria-label="Profile summary">
+    <div class="bar"><span>GET /disha</span><b>200 OK</b></div>
+<pre><span class="l" style="animation-delay:.2s">{</span>
+<span class="l" style="animation-delay:.45s">  <span class="k">"name"</span>: "Disha G. Bhise",</span>
+<span class="l" style="animation-delay:.7s">  <span class="k">"role"</span>: "Backend developer, student",</span>
+<span class="l" style="animation-delay:.95s">  <span class="k">"stack"</span>: ["Python", "FastAPI", "Django", "PostgreSQL"],</span>
+<span class="l" style="animation-delay:1.2s">  <span class="k">"learning"</span>: ["RAG", "LangChain", "AI agents"],</span>
+<span class="l" style="animation-delay:1.45s">  <span class="k">"built"</span>: "3 full-stack projects",</span>
+<span class="l" style="animation-delay:1.7s">  <span class="k">"degree"</span>: "B.E. AI &amp; Data Science, 2028",</span>
+<span class="l" style="animation-delay:1.95s">  <span class="k">"open_to"</span>: "Internships"</span>
+<span class="l" style="animation-delay:2.2s">}</span></pre>
+  </div>
+</section>
+<section id="projects" class="wrap">
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="card big">
+      <span class="win">Latest project, July 2026</span>
+      <h3>Livestock and food-safety management system</h3>
+      <p class="muted">A FastAPI system that tracks the health of animals from treatment to lab test, so farms can prove traceability and compliance.</p>
+      <ul><li>Role-based access control, so each role sees only what it should</li><li>Animal, breed, treatment and medicine management through REST APIs</li><li>Treatment, medicine and lab test workflows for animal health tracking</li><li>Lab test requests and results that support disease diagnosis and monitoring</li><li>Web interface for health records, traceability and compliance</li></ul>
+      <div class="tags"><span>Python</span><span>FastAPI</span><span>REST APIs</span><span>RBAC</span></div>
+      <div class="links"><a href="https://github.com/bhisedisha05-ai/Livestock_management_system" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    <article class="card big">
+      <span class="win">Live, February 2026</span>
+      <h3>Inventory management system</h3>
+      <p class="muted">My first full-stack project, built to learn how backend systems really work. It handles stock, suppliers and reports behind a secure login.</p>
+      <ul><li>Analytics dashboard for inventory insights</li><li>Item, category and supplier management with CRUD</li><li>Stock-in and stock-out tracking, plus low-stock alerts</li><li>Reports with charts and CSV export</li><li>JWT login and signup, with SQLite and PostgreSQL support</li></ul>
+      <div class="tags"><span>FastAPI</span><span>Python</span><span>SQLAlchemy</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Jinja2</span></div>
+      <div class="links"><a href="https://inventory-management-2-pq36.onrender.com/ui/login" target="_blank" rel="noopener">Live project</a><a href="https://github.com/bhisedisha05-ai/Inventory-Management" target="_blank" rel="noopener">GitHub</a></div>
+    </article>
+    <article class="card big">
+      <span class="win">Runs locally, DBMS project</span>
+      <h3>Student management system</h3>
+      <p class="muted">Built for my DBMS course so teachers can manage students, subjects and marks without Excel sheets. It runs on localhost, so the code is on GitHub.</p>
+      <ul><li>Add, edit and delete students</li><li>Subject management and marks entry</li><li>Dashboard plus full REST API support</li></ul>
+      <div class="tags"><span>FastAPI</span><span>SQLAlchemy</span><span>SQLite</span><span>Bootstrap 5</span><span>Jinja2</span></div>
+      <div class="links"><a href="https://github.com/bhisedisha05-ai/student_management_system" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7462876308134555649/" target="_blank" rel="noopener">LinkedIn post</a></div>
+    </article>
+  </div>
+  <p class="more">More code is on <a href="https://github.com/bhisedisha05-ai" target="_blank" rel="noopener">GitHub</a>.</p>
+</section>
+<section id="skills" class="wrap">
+  <h2>Skills</h2>
+  <dl>
+    <dt>Languages</dt><dd>Python, C, C++, JavaScript, SQL</dd>
+    <dt>Backend</dt><dd>FastAPI, Django, Django REST, SQLAlchemy, JWT authentication</dd>
+    <dt>Frontend</dt><dd>React, TypeScript, Bootstrap</dd>
+    <dt>Databases</dt><dd>PostgreSQL, MySQL, SQLite</dd>
+    <dt>AI</dt><dd>Machine learning, generative AI, LLMs, RAG, LangChain, LangGraph</dd>
+    <dt>Tools</dt><dd>VS Code, Google Colab, Postman, Git, GitHub</dd>
+  </dl>
+</section>
+<section id="learning" class="wrap">
+  <h2>Education and certificates</h2>
+  <p><strong>B.E. in Artificial Intelligence and Data Science</strong><br><span class="muted">Konkan Gyanpeeth College of Engineering, University of Mumbai, 2024 to 2028. CGPI 7.14 after 4 semesters</span></p>
+  <p class="muted" style="margin-top:.6rem">Outside code, I attend tech events and play sports.</p>
+  <div class="certs">
+    <a class="cert" href="https://www.udemy.com/certificate/UC-80a3fde4-7231-4c4b-9fa0-4d7b59dc7ae1/" target="_blank" rel="noopener"><b>Full Stack Generative and Agentic AI with Python</b><small>Udemy, October 2026. Python, Git, Docker, Pydantic, LLMs, RAG pipelines and AI agents with LangChain and LangGraph.</small></a>
+    <div class="cert"><b>Certification in C and C++</b><small>October 2026</small></div>
+  </div>
+</section>
+</main>
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's build something.</h2>
+    <a class="mail" href="mailto:bhisedisha05@gmail.com">bhisedisha05@gmail.com</a>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/disha-bhise-272025407" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/bhisedisha05-ai" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <small class="copy">© <span id="yr">2026</span> Disha G. Bhise. Mumbai, India.</small>
+  </div>
+</footer>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+  btn.addEventListener('click',function(){
+    var dark=root.getAttribute('data-theme')?root.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
